@@ -14,7 +14,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class GetTop3ListResponseDto {
     private int boardNumber;
-    private String boardTitle;
     private String boardContent;
     private String boardImgUrl;
     private String boardWriteDatetime;
@@ -28,8 +27,6 @@ public class GetTop3ListResponseDto {
         this.boardNumber = boardEntity.getBoardNumber();
         this.boardContent = boardEntity.getBoardContent();
         this.boardImgUrl = boardEntity.getBoardImgUrl1();
-        this.boardImgUrl = boardEntity.getBoardImgUrl2();
-        this.boardImgUrl = boardEntity.getBoardImgUrl3();
         this.boardWriteDatetime = boardEntity.getBoardWriteTime();
         this.viewCount = boardEntity.getViewCount();
         this.writerNickname = boardEntity.getWriterNickname();

@@ -170,10 +170,10 @@ export default function BoardWriteView() {
     }
 
     return (
-        <Box sx={{ paddingTop: '100px' }}>
+        <Box sx={{ paddingTop: '100px', pl: "120px", pr: "120px" }}>
             {/* //? 게시물 본문 */}
             <Box sx={{ width: '100%', display: 'block', textAlign: 'center' }}>
-                {/* //? 본문 사진 업로드 : 여러 박스에 올리려면 어떻게 해야하는가 */}
+                {/* //? 본문 사진 업로드 : */}
                 <Box sx={{ p: '15px 0' }}>
                     <Box sx={{ width: '100%' }} >
                         <Box sx={{ width: '50%' }} component='img' src={boardImgUrl1} />
@@ -210,7 +210,7 @@ export default function BoardWriteView() {
                     </Box>
                 </Box>
 
-                <Box sx={{ display: 'block-flex', justifyContent: 'center', mt: '45px', ml: '225px', p: '15px 0px', width: '70%', border: 0.3, borderRadius: 0.5, backgroundColor: 'rgba(0, 0, 0, 0.02)' }}>
+                <Box sx={{ display: 'block-flex', justifyContent: 'center', mt: '45px', ml: '120px', mr: "120px", p: '15px 0px', width: '80%', border: 0.3, borderRadius: 0.5, backgroundColor: 'rgba(0, 0, 0, 0.02)' }}>
                     {/* //? 스타일 태그 */}
                     <Typography sx={{ m: '4px 10px 0 20px' }} >스타일 :</Typography>
                     <Input disableUnderline sx={{ mr: '10px', border: 0.05, width: '130px', height: '25px' }} onChange={(event) => onTagChangeHandler(event)} />
@@ -223,7 +223,7 @@ export default function BoardWriteView() {
 
             <Divider sx={{ m: '40px 0' }} />
 
-            <Box sx={{ display: 'flex', flexDirection: 'column', mt: '100px', pl: '450px', width: '1000px' }}>
+            <Box sx={{ display: 'flex', flexDirection: 'column', mt: '100px', width: '100%' }}>
                 {/* //? 상품 업로드 박스 */}
                 <Box >
                     <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -255,14 +255,18 @@ export default function BoardWriteView() {
                         </Box >
                         {/* //? 상품 등록박스2 */}
                         <Box sx={{ p: '15PX 15px', width: '235px', height: '285px', border: 0.3, borderRadius: 1 }}>
-                            <Box>
-                                <Box>
-                                    <Card sx={{ width: '235px', height: '150px', backgroundColor: 'yellow', display: 'flex', justifyContent: 'center', boxSizing: 'border-box' }}>
-                                        <IconButton onClick={() => onProductImageUploadButtonHandler()} >
-                                            <AddAPhotoIcon />
-                                            <input ref={productImgRef} hidden type='file' accept='image/*' onChange={(event) => onProductImageUploadChangeHandler(event)} />
-                                        </IconButton>
-                                    </Card>
+                            <Box sx={{ display: 'flex' }}>
+                                <Box sx={{ p: '15px 0' }}>
+                                    <Box sx={{ width: '100%' }} >
+                                        <Box sx={{ width: '100%', position: 'relative', zIndex: '1' }} component='img' src={productImgUrl} />
+                                    </Box>
+                                </Box>
+
+                                <Box sx={{ position: 'relative', zIndex: '1' }}>
+                                    <IconButton onClick={() => onProductImageUploadButtonHandler()} >
+                                        <AddAPhotoIcon />
+                                        <input ref={productImgRef} hidden type='file' accept='image/*' onChange={(event) => onProductImageUploadChangeHandler(event)} />
+                                    </IconButton>
                                 </Box>
                             </Box>
                             <Box sx={{ ml: '5px', mt: '15px' }}>
@@ -276,13 +280,19 @@ export default function BoardWriteView() {
                         </Box>
                         {/* //? 상품 등록박스3 */}
                         <Box sx={{ p: '15PX 15px', width: '235px', height: '285px', border: 0.3, borderRadius: 1 }}>
-                            <Box>
-                                <Card sx={{ width: '235px', height: '150px', backgroundColor: 'yellow', display: 'flex', justifyContent: 'center', boxSizing: 'border-box' }}>
+                            <Box sx={{ display: 'flex' }}>
+                                <Box sx={{ p: '15px 0' }}>
+                                    <Box sx={{ width: '100%' }} >
+                                        <Box sx={{ width: '100%', position: 'relative', zIndex: '1' }} component='img' src={productImgUrl} />
+                                    </Box>
+                                </Box>
+
+                                <Box sx={{ position: 'relative', zIndex: '1' }}>
                                     <IconButton onClick={() => onProductImageUploadButtonHandler()} >
                                         <AddAPhotoIcon />
                                         <input ref={productImgRef} hidden type='file' accept='image/*' onChange={(event) => onProductImageUploadChangeHandler(event)} />
                                     </IconButton>
-                                </Card>
+                                </Box>
                             </Box>
                             <Box sx={{ ml: '5px', mt: '15px' }}>
                                 <Input sx={{ backgroundColor: 'rgba(0, 0, 0, 0.02)', width: '225px' }} disableUnderline placeholder='상품 이름'
@@ -298,13 +308,19 @@ export default function BoardWriteView() {
                     <Box sx={{ mt: '20px', mb: '100px', display: 'flex', justifyContent: 'space-between' }}>
                         {/* //? 상품 등록박스4 */}
                         <Box sx={{ p: '15PX 15px', width: '235px', height: '285px', border: 0.3, borderRadius: 1 }}>
-                            <Box>
-                                <Card sx={{ width: '235px', height: '150px', backgroundColor: 'yellow', display: 'flex', justifyContent: 'center', boxSizing: 'border-box' }}>
+                            <Box sx={{ display: 'flex' }}>
+                                <Box sx={{ p: '15px 0' }}>
+                                    <Box sx={{ width: '100%' }} >
+                                        <Box sx={{ width: '100%', position: 'relative', zIndex: '1' }} component='img' src={productImgUrl} />
+                                    </Box>
+                                </Box>
+
+                                <Box sx={{ position: 'relative', zIndex: '1' }}>
                                     <IconButton onClick={() => onProductImageUploadButtonHandler()} >
                                         <AddAPhotoIcon />
                                         <input ref={productImgRef} hidden type='file' accept='image/*' onChange={(event) => onProductImageUploadChangeHandler(event)} />
                                     </IconButton>
-                                </Card>
+                                </Box>
                             </Box>
                             <Box sx={{ ml: '5px', mt: '15px' }}>
                                 <Input sx={{ backgroundColor: 'rgba(0, 0, 0, 0.02)', width: '225px' }} disableUnderline placeholder='상품 이름'
@@ -317,13 +333,19 @@ export default function BoardWriteView() {
                         </Box>
                         {/* //? 상품 등록박스5 */}
                         <Box sx={{ p: '15PX 15px', width: '235px', height: '285px', border: 0.3, borderRadius: 1 }}>
-                            <Box>
-                                <Card sx={{ width: '235px', height: '150px', backgroundColor: 'yellow', display: 'flex', justifyContent: 'center', boxSizing: 'border-box' }}>
+                            <Box sx={{ display: 'flex' }}>
+                                <Box sx={{ p: '15px 0' }}>
+                                    <Box sx={{ width: '100%' }} >
+                                        <Box sx={{ width: '100%', position: 'relative', zIndex: '1' }} component='img' src={productImgUrl} />
+                                    </Box>
+                                </Box>
+
+                                <Box sx={{ position: 'relative', zIndex: '1' }}>
                                     <IconButton onClick={() => onProductImageUploadButtonHandler()} >
                                         <AddAPhotoIcon />
                                         <input ref={productImgRef} hidden type='file' accept='image/*' onChange={(event) => onProductImageUploadChangeHandler(event)} />
                                     </IconButton>
-                                </Card>
+                                </Box>
                             </Box>
                             <Box sx={{ ml: '5px', mt: '15px' }}>
                                 <Input sx={{ backgroundColor: 'rgba(0, 0, 0, 0.02)', width: '225px' }} disableUnderline placeholder='상품 이름'
@@ -336,13 +358,19 @@ export default function BoardWriteView() {
                         </Box>
                         {/* //? 상품 등록박스6 */}
                         <Box sx={{ p: '15PX 15px', width: '235px', height: '285px', border: 0.3, borderRadius: 1 }}>
-                            <Box>
-                                <Card sx={{ width: '235px', height: '150px', backgroundColor: 'yellow', display: 'flex', justifyContent: 'center', boxSizing: 'border-box' }}>
+                            <Box sx={{ display: 'flex' }}>
+                                <Box sx={{ p: '15px 0' }}>
+                                    <Box sx={{ width: '100%' }} >
+                                        <Box sx={{ width: '100%', position: 'relative', zIndex: '1' }} component='img' src={productImgUrl} />
+                                    </Box>
+                                </Box>
+
+                                <Box sx={{ position: 'relative', zIndex: '1' }}>
                                     <IconButton onClick={() => onProductImageUploadButtonHandler()} >
                                         <AddAPhotoIcon />
                                         <input ref={productImgRef} hidden type='file' accept='image/*' onChange={(event) => onProductImageUploadChangeHandler(event)} />
                                     </IconButton>
-                                </Card>
+                                </Box>
                             </Box>
                             <Box sx={{ ml: '5px', mt: '15px' }}>
                                 <Input sx={{ backgroundColor: 'rgba(0, 0, 0, 0.02)', width: '225px' }} disableUnderline placeholder='상품 이름'
