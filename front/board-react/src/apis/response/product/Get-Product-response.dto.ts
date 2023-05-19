@@ -1,5 +1,5 @@
 interface Dto {
-    productList: [
+    product: 
         {
             boardNumber: number;
             productNumber: number;
@@ -8,7 +8,6 @@ interface Dto {
             productUrl: string;
             productImgUrl: string;
         }
-    ]
 }
 
 export default Dto;

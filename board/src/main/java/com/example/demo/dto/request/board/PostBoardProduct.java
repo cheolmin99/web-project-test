@@ -1,6 +1,4 @@
-package com.example.demo.dto.request.product;
-
-import javax.validation.constraints.NotBlank;
+package com.example.demo.dto.request.board;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,13 +7,11 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class PostProductDto {
-    @NotBlank
+public class PostBoardProduct {
+    
     private String productName;
-    @NotBlank
     private String productPrice;
-    @NotBlank
     private String productUrl;
-    @NotBlank
-    private String productImgUrl;
+    private String productImgUrl; 
+    
 }

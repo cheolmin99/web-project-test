@@ -3,7 +3,6 @@ package com.example.demo.dto.response.board;
 import java.util.List;
 
 import com.example.demo.entity.BoardEntity;
-import com.example.demo.entity.BoardHasProductEntity;
 import com.example.demo.entity.CommentEntity;
 import com.example.demo.entity.LikyEntity;
 import com.example.demo.entity.ProductEntity;

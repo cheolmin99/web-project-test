@@ -9,6 +9,7 @@ import com.example.demo.dto.request.product.PostProductDto;
 import com.example.demo.dto.response.ResponseDto;
 import com.example.demo.dto.response.product.DeleteProductResponseDto;
 import com.example.demo.dto.response.product.PatchProductResponseDto;
+import com.example.demo.dto.response.product.PostBoardHasProductResponseDto;
 import com.example.demo.dto.response.product.PostProductResponseDto;
 import com.example.demo.entity.BoardEntity;
 import com.example.demo.entity.BoardHasProductEntity;
@@ -51,6 +52,31 @@ public class ProductServiceImplements implements ProductService{
         return ResponseDto.setSuccess(ResponseMessage.SUCCESS, data);
 
     }
+
+    public ResponseDto<PostBoardHasProductResponseDto> postBoardHasProduct(PostBoardHasProductResponseDto dto) {
+        PostBoardHasProductResponseDto data = null;
+
+        int boardNumber = dto.getBoardNumber();
+        int productNumber = dto.getProductNumber();
+
+        try {
+            BoardEntity boardEntity = boardRepository.findByBoardNumber(boardNumber);
+            if (boardEntity == null) return ResponseDto.setFailed(ResponseMessage.NOT_EXIST_BOARD);
+            ProductEntity productEntity = productRepository.findByProductNumber(productNumber);
+            if (productEntity == null) return ResponseDto.setFailed(ResponseMessage.NOT_EXIST_PRODUCT);
+
+            BoardHasProductEntity boardHasProductEntity = new BoardHasProductEntity(boardNumber, productNumber);
+            boardHasProductEntity = boardHasProductRepository.save(boardHasProductEntity);
+
+            data = new PostBoardHasProductResponseDto(boardHasProductEntity);
+
+        } catch(Exception exception) {
+            exception.printStackTrace();
+            return ResponseDto.setFailed(ResponseMessage.DATABASE_ERROR);
+        }
+        return ResponseDto.setSuccess(ResponseMessage.SUCCESS, data);
+    }
+    
     public ResponseDto<PatchProductResponseDto> patchProduct(String email , PatchProductDto dto) {
         
         PatchProductResponseDto data = null;

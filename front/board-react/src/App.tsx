@@ -12,7 +12,7 @@ import Menus from './views/Menus';
 import { GetUserResponseDto } from './apis/response/user';
 import AuthenticationView from './views/AuthenticationView'
 import Main from './views/Main';
-import BoardWriteView from './views/Board/BoardWriteView';
+import WriteView from './views/WriteView';
 
 
 
@@ -60,7 +60,7 @@ useEffect(() => {
             <Route path='/auth' element={(<AuthenticationView />)} />
             {/* <Route path='/myPage' element={(<MyPageView />)} /> */}
             <Route path='/board'>
-            <Route path='post-board' element={(<BoardWriteView />)} />
+            <Route path='post-board' element={(<WriteView />)} />
             {/* <Route path='search/:content' element={(<SearchView />)} />
             <Route path='detail/:boardNumber' element={(<BoardDetailView />)} />
             <Route path='update/:boardNumber' element={(<BoardUpdateView />)} /> */}

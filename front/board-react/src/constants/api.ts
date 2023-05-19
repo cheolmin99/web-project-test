@@ -31,6 +31,7 @@ export const LIKE_URL = `${HOST}api/board/like`;
 
 export const POST_PRODUCT_URL = `${HOST}product/post-product`;
 
+export const POST_BOARD_HAS_PRODUCT = `${HOST}product/has-product`
 export const PATCH_BOARD_URL = `${HOST}api/board/`;
 export const PATCH_PRODUCT_RUL = `${HOST}product/patch-product`;
 

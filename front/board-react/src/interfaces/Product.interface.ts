@@ -1,8 +1,8 @@
 interface Product {
-    productNumber : number;
+    productNumber? : number;
     productName : string;
-    productPrice : number;
+    productPrice : string;
     productUrl : string;
-    productImgUrl : string; //? 굳이 필요한가????
+    productImgUrl : string; 
 }
 export default Product;
