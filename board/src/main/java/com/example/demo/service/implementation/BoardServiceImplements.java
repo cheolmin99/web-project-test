@@ -33,6 +33,7 @@ import com.example.demo.entity.BoardHasProductEntity;
 import com.example.demo.entity.CommentEntity;
 import com.example.demo.entity.LikyEntity;
 import com.example.demo.entity.ProductEntity;
+import com.example.demo.entity.SearchWordLogEntity;
 import com.example.demo.entity.UserEntity;
 import com.example.demo.entity.resultSet.SearchWordResultSet;
 import com.example.demo.repository.BoardHasProductRepository;
@@ -213,6 +214,9 @@ public class BoardServiceImplements implements BoardService {
             return ResponseDto.setFailed(ResponseMessage.DATABASE_ERROR);
         }
 
+        SearchWordLogEntity searchWordLogEntity = new SearchWordLogEntity(tag);
+        searchWordLogRepository.save(searchWordLogEntity);
+
         return ResponseDto.setSuccess(ResponseMessage.SUCCESS, data);
     }
 
@@ -240,7 +244,7 @@ public class BoardServiceImplements implements BoardService {
     //? 인기 검색어
     public ResponseDto<GetTop15SearchWordResponseDto> getTop15SearchWord() {
         GetTop15SearchWordResponseDto data = null;
-    
+        
         try {
             List<SearchWordResultSet> searchWordList = searchWordLogRepository.findTop15();
             data = GetTop15SearchWordResponseDto.copyList(searchWordList);
@@ -248,7 +252,7 @@ public class BoardServiceImplements implements BoardService {
             exception.printStackTrace();
             return ResponseDto.setFailed(ResponseMessage.DATABASE_ERROR);
         }
-    
+        
         return ResponseDto.setSuccess(ResponseMessage.SUCCESS, data);
     }
 
