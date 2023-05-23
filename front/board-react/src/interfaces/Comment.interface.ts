@@ -3,7 +3,7 @@ interface Comment {
     commentNumber : number;
     writerEmail : string;
     writerNickname : string;
-    writerProfileUrl : string | null;
+    writerProfileUrl? : string | null;
     writerDate : string;
     commentContent : number;
 }

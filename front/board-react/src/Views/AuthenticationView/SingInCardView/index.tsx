@@ -77,7 +77,7 @@ export default function SignInCardView({ setSignInView }: Props) {
         const userNickname = user.nickname;
         alert(userNickname + "님 환영합니다!!");
         navigator('/');
-        console.log(data);
+        console.log(data); //user로 받아온 이유?
     }
 
     const signInErrorHandler = (error: any) => {

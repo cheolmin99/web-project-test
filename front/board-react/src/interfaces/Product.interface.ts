@@ -3,6 +3,6 @@ interface Product {
     productName : string;
     productPrice : string;
     productUrl : string;
-    productImgUrl : string; 
+    productImgUrl : string;
 }
 export default Product;

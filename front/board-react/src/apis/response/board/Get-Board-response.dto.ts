@@ -1,5 +1,5 @@
-interface Dto {
-    boardEntity: {
+interface GetBoardResponseDto {
+    board: {
         boardNumber: number;
         boardContent: string;
         boardImgUrl1: string;
@@ -14,7 +14,15 @@ interface Dto {
         likeCount: number;
         viewCount: number;
     };
-    commentEntity: [
+    user: {
+            email: string;
+            nickname: string;
+            profile: string | null;
+            height: string;
+            weight: string;
+            gender: string;
+    };
+    commentList: [
         {
             boardNumber: number;
             commentNumber: number;
@@ -25,12 +33,12 @@ interface Dto {
             commentContent: number;
         }
     ];
-    likeEntity: [
+    likeList: [
         {
             boardNumber: number;
-            // userEmail : string;
-            // userNickname : string;
-            // userProfileUrl : string | null; 좋아요 수만 올라가게 나올려면 이건 필요없는듯?
+            userEmail : string;
+            userNickname : string;
+            userProfileUrl : string | null;
         }
     ];
     productList: [
@@ -45,4 +53,4 @@ interface Dto {
     ]
 }
 
-export default Dto;
+export default GetBoardResponseDto;
