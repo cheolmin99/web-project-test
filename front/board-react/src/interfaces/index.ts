@@ -7,7 +7,7 @@ import User from "./User.interface";
 
 export interface IBoardItem {
     boardNumber : number;
-    boardContent : string;
+    boardContent : string | null;
     boardImgUrl1 : string;
     boardImgUrl2 : string | null;
     boardImgUrl3 : string | null;
@@ -35,10 +35,10 @@ export interface ILikyItem {
 }
 
 export interface IProductItem {
-    postedProductName : string;
-    postedProductPrice : number;
-    postedProductUrl : string;
-    postdeProductImgUrl : string; //? 굳이 필요한가???? 
+    postedProductName : string | null;
+    postedProductPrice : string | null;
+    postedProductUrl : string | null;
+    postdeProductImgUrl : string | null; //? 굳이 필요한가???? 
 }
 
 export interface IUser {

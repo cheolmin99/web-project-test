@@ -1,6 +1,6 @@
 interface Board {
     boardNumber : number;
-    boardContent : string;
+    boardContent? : string | null;
     boardImgUrl1 : string;
     boardImgUrl2? : string | null;
     boardImgUrl3? : string | null;

@@ -1,7 +1,7 @@
 interface GetBoardResponseDto {
     board: {
         boardNumber: number;
-        boardContent: string;
+        boardContent: string | null;
         boardImgUrl1: string;
         boardImgUrl2: string | null;
         boardImgUrl3: string | null;
@@ -25,13 +25,13 @@ interface GetBoardResponseDto {
     commentList: [
         {
             boardNumber: number;
+            commentContent: string;
             commentNumber: number;
+            writerDate: string;
             writerEmail: string;
             writerNickname: string;
             writerProfileUrl: string | null;
-            writerDate: string;
-            commentContent: number;
-        }
+        }    
     ];
     likeList: [
         {
@@ -43,12 +43,11 @@ interface GetBoardResponseDto {
     ];
     productList: [
         {
-            boardNumber: number;
             productNumber: number;
-            productName: string;
-            productPrice: string;
-            productUrl: string;
-            productImgUrl: string;
+            productName: string | null;
+            productPrice: string | null;
+            productUrl: string | null;
+            productImgUrl: string | null;
         }
     ]
 }

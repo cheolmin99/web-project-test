@@ -1,8 +1,8 @@
 interface Product {
     productNumber? : number;
-    productName : string;
-    productPrice : string;
-    productUrl : string;
-    productImgUrl : string;
+    productName : string | null;
+    productPrice : string | null;
+    productUrl : string | null;
+    productImgUrl : string | null;
 }
 export default Product;

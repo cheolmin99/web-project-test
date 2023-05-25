@@ -13,8 +13,7 @@ import { GetUserResponseDto } from './apis/response/user';
 import AuthenticationView from './views/AuthenticationView'
 import Main from './views/Main';
 import WriteView from './views/WriteView';
-
-
+import BoardDetailView from './views/Board/BoardDtailView';
 
 function App() {
 
@@ -61,9 +60,9 @@ useEffect(() => {
             {/* <Route path='/myPage' element={(<MyPageView />)} /> */}
             <Route path='/board'>
             <Route path='post-board' element={(<WriteView />)} />
-            {/* <Route path='search/:content' element={(<SearchView />)} />
+            {/* <Route path='search/:content' element={(<SearchView />)} /> */}
             <Route path='detail/:boardNumber' element={(<BoardDetailView />)} />
-            <Route path='update/:boardNumber' element={(<BoardUpdateView />)} /> */}
+            {/* <Route path='update/:boardNumber' element={(<BoardUpdateView />)} /> */}
           </Route>
           </Routes>
           {/* { path.pathname !== '/auth' && (<Footer />) } */}

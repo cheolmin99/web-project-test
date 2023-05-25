@@ -362,7 +362,7 @@ export default function ProductWriteView() {
             alert('최소 상,하의, 신발 정보는 입력해주세요.');
             return;
         }
-        postProduct();
+
     }
 
     // response handler //
@@ -488,7 +488,7 @@ export default function ProductWriteView() {
                             <Box sx={{ display: 'flex' }}>
                                 <Box sx={{ p: '15px 0' }}>
                                     <Box sx={{ width: '100%' }} >
-                                        <Box sx={{ width: '100%' }} component='img' src={product1?.productImgUrl} />
+                                        <Box sx={{ width: '100%' }} component='img' src={product1?.productImgUrl ? product1.productImgUrl : ''} />
                                     </Box>
                                 </Box>
                                 <Box sx={{}}>
@@ -513,7 +513,7 @@ export default function ProductWriteView() {
                             <Box sx={{ display: 'flex' }}>
                                 <Box sx={{ p: '15px 0' }}>
                                     <Box sx={{ width: '100%' }} >
-                                    <Box sx={{ width: '100%' }} component='img' src={product2?.productImgUrl} />
+                                        <Box sx={{ width: '100%' }} component='img' src={product2?.productImgUrl ? product2.productImgUrl : ''} />
                                     </Box>
                                 </Box>
                                 <Box sx={{}}>
@@ -537,7 +537,7 @@ export default function ProductWriteView() {
                             <Box sx={{ display: 'flex' }}>
                                 <Box sx={{ p: '15px 0' }}>
                                     <Box sx={{ width: '100%' }} >
-                                        <Box sx={{ width: '100%' }} component='img' src={product3?.productImgUrl} />
+                                        <Box sx={{ width: '100%' }} component='img' src={product3?.productImgUrl ? product3.productImgUrl : ''} />
                                     </Box>
                                 </Box>
                                 <Box sx={{}}>
@@ -564,7 +564,7 @@ export default function ProductWriteView() {
                             <Box sx={{ display: 'flex' }}>
                                 <Box sx={{ p: '15px 0' }}>
                                     <Box sx={{ width: '100%' }} >
-                                    <Box sx={{ width: '100%' }} component='img' src={product4?.productImgUrl} />
+                                        <Box sx={{ width: '100%' }} component='img' src={product4?.productImgUrl ? product4.productImgUrl : ''} />
                                     </Box>
                                 </Box>
                                 <Box sx={{}}>
@@ -588,7 +588,7 @@ export default function ProductWriteView() {
                             <Box sx={{ display: 'flex' }}>
                                 <Box sx={{ p: '15px 0' }}>
                                     <Box sx={{ width: '100%' }} >
-                                    <Box sx={{ width: '100%' }} component='img' src={product5?.productImgUrl} />
+                                        <Box sx={{ width: '100%' }} component='img' src={product5?.productImgUrl ? product5.productImgUrl : ''} />
                                     </Box>
                                 </Box>
                                 <Box sx={{}}>
@@ -612,7 +612,7 @@ export default function ProductWriteView() {
                             <Box sx={{ display: 'flex' }}>
                                 <Box sx={{ p: '15px 0' }}>
                                     <Box sx={{ width: '100%' }} >
-                                    <Box sx={{ width: '100%' }} component='img' src={product6?.productImgUrl} />
+                                        <Box sx={{ width: '100%' }} component='img' src={product6?.productImgUrl ? product6.productImgUrl : ''} />
                                     </Box>
                                 </Box>
                                 <Box sx={{}}>
@@ -640,5 +640,5 @@ export default function ProductWriteView() {
             </Fab> */}
         </>
     )
- 
+
 }
