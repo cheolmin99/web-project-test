@@ -1,5 +1,5 @@
 interface PatchProfileRequestDto {
-    profileUrl: string;
+    profile: string;
 }
 
 export default PatchProfileRequestDto;

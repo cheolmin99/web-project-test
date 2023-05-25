@@ -94,8 +94,8 @@ export default function MyPageView() {
     }
 
     const onPatchProfileUploadResponseHandler = (response: AxiosResponse<any, any>) => {
-        const profileUrl = response.data as string;
-        const data: PatchProfileRequestDto = { profileUrl };
+        const profile = response.data as string;
+        const data: PatchProfileRequestDto = { profile };
 
         axios.patch(PATCH_PROFILE_URL, data, authorizationHeader(accessToken))
         .then((response) => onPatchProfileResponseHandler(response))
