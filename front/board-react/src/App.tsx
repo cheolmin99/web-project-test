@@ -14,6 +14,7 @@ import AuthenticationView from './views/AuthenticationView'
 import Main from './views/Main';
 import WriteView from './views/WriteView';
 import BoardDetailView from './views/Board/BoardDtailView';
+import UpdateView from './views/UpdateView';
 
 function App() {
 
@@ -62,7 +63,7 @@ useEffect(() => {
             <Route path='post-board' element={(<WriteView />)} />
             {/* <Route path='search/:content' element={(<SearchView />)} /> */}
             <Route path='detail/:boardNumber' element={(<BoardDetailView />)} />
-            {/* <Route path='update/:boardNumber' element={(<BoardUpdateView />)} /> */}
+            <Route path='update/:boardNumber' element={(<UpdateView />)} />
           </Route>
           </Routes>
           {/* { path.pathname !== '/auth' && (<Footer />) } */}

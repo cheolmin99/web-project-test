@@ -30,8 +30,6 @@ export default function BoardWriteView() {
     const { product1, product2, product3, product4, product5, product6 } = usePostProductStore();
     const { setBoardContent, setBoardImgUrl1, setBoardImgUrl2, setBoardImgUrl3, setTag } = usePostProductStore();
 
-    const [board, setboard] = useState<PostBoardResponseDto | null>(null);
-
     let boardNumber = 0;
 
     const accessToken = cookies.accessToken;
@@ -143,7 +141,7 @@ export default function BoardWriteView() {
         // setBoard(data);
         boardNumber = data.boardEntity.boardNumber;
 
-        if (!boardImgUrl1.trim() || !boardContent.trim()) {
+        if (!boardImgUrl1.trim()) {
             alert('모든 내용을 작성해주세요!');
             return;
         }
@@ -213,7 +211,7 @@ export default function BoardWriteView() {
                 <Divider sx={{ m: '40px 0' }} />
                 <Box sx={{ p: '15px 0' }}>
                     <Box sx={{ width: '100%' }} >
-                        <Box sx={{ width: '50%' }} component='img' src={boardImgUrl2} />
+                        <Box sx={{ width: '50%' }} component='img' src={boardImgUrl2 ? boardImgUrl2 : '' } />
                     </Box>
                     <Box sx={{}}>
                         <IconButton onClick={() => onBoardImageUploadButtonHandler2()} >
@@ -225,7 +223,7 @@ export default function BoardWriteView() {
                 <Divider sx={{ m: '40px 0' }} />
                 <Box sx={{ p: '15px 0' }}>
                     <Box sx={{ width: '100%' }} >
-                        <Box sx={{ width: '50%' }} component='img' src={boardImgUrl3} />
+                        <Box sx={{ width: '50%' }} component='img' src={boardImgUrl3 ? boardImgUrl3 : '' } />
                     </Box>
                     <Box sx={{}}>
                         <IconButton onClick={() => onBoardImageUploadButtonHandler3()} >
