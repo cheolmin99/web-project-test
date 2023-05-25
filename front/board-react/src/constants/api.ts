@@ -21,23 +21,22 @@ export const PATCH_PROFILE_URL = `${HOST}api/user/profile`;
 export const GET_LIST_URL = `${HOST}api/board/list`;
 export const GET_MY_LIST_URL = `${HOST}api/board/my-list`;
 export const GET_TOP3_LIST_URL = `${HOST}api/board/top3-list`;
-export const GET_TOP15_SEARCH_WORD_URL = `${HOST}api/board/top15-search-word`;
-export const GET_SEARCH_TAG = (tag: string) => `${HOST}api/board/search-tag/${tag}`;
+export const GET_TOP15_SEARCH_TAG_URL = `${HOST}api/board/top15-search-word`;
+export const SEARCH_TAG_URL = (tag: string) => `${HOST}api/board/search-tag/${tag}`;
 
 export const POST_BOARD_URL = `${HOST}api/board/post-board`;
 export const POST_COMMENT_URL = `${HOST}api/board/comment`;
-export const POST_LIKE_LIST_URL = `${HOST}api/board/like-list`;
+export const GET_MY_LIKE_LIST_URL = `${HOST}api/board/like-list`;
 export const LIKE_URL = `${HOST}api/board/like`;
 
 export const POST_PRODUCT_URL = `${HOST}product/post-product`;
 
 export const POST_BOARD_HAS_PRODUCT = `${HOST}product/has-product`
 export const PATCH_BOARD_URL = `${HOST}api/board/`;
-export const PATCH_PRODUCT_RUL = `${HOST}product/patch-product`;
+export const PATCH_PRODUCT_URL = `${HOST}product/patch-product`;
 
 export const GET_BOARD_URL = (boardNumber: string) => `${HOST}api/board/${boardNumber}`;
 export const GET_SEARCH_LIST_URL = (content: string, previous: string) => previous ? `${HOST}api/board/search-list/${content}/${previous}` : `${HOST}api/board/search-list/${content}`;
-export const GET_TOP15_RELATED_SEARCH_WORD_URL = (content: string) => `${HOST}api/board/top15-related-search-word/${content}`
 
 export const DELETE_BOARD_URL = (boardNumber: string) => `${HOST}api/board/${boardNumber}`;
 export const DELETE_PRODUCT_URL = (productNumber: string) => `${HOST}product/${productNumber}`;

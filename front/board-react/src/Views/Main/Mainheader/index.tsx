@@ -2,13 +2,13 @@ import { Box, Grid, Typography } from "@mui/material";
 import axios, { AxiosResponse } from "axios";
 import { useEffect, useState } from "react";
 import ResponseDto from "src/apis/response";
-import { GetTop3ListDto } from "src/apis/response/board";
+import { GetTop3ListResponseDto } from "src/apis/response/board";
 import { GET_TOP3_LIST_URL } from "src/constants/api";
 
 export default function MainHead() {
 
     //          Hook          //
-    const [top3List, setTop3List] = useState<GetTop3ListDto[]>([]);
+    const [top3List, setTop3List] = useState<GetTop3ListResponseDto[]>([]);
 
     //          Event Handler          //
     const getTop3List = () => {
@@ -19,7 +19,7 @@ export default function MainHead() {
 
     //           Response Handler           //
     const getTop3ListResponseHandler = (response: AxiosResponse<any, any>) => {
-        const { result, message, data } = response.data as ResponseDto<GetTop3ListDto[]>;
+        const { result, message, data } = response.data as ResponseDto<GetTop3ListResponseDto[]>;
         if (!result || data === null) return;
         setTop3List(data);
     }

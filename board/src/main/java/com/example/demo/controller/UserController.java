@@ -16,6 +16,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,7 +39,7 @@ public class UserController {
         return response;
     }
 
-    @GetMapping(PATCH_PROFILE)
+    @PatchMapping(PATCH_PROFILE)
     public ResponseDto<PatchProfileResponseDto> patchProfle(
         @AuthenticationPrincipal String email,
         @Valid @RequestBody PatchProfileDto requestBody) {

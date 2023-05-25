@@ -1,5 +1,5 @@
-interface GetTop3ListDto {
-    boarNumber : number;
+interface GetTop3ListResponseDto {
+    boardNumber : number;
     boardContent : string | null;
     boardImgUrl : string;
     boardWriteDateTime : string;
@@ -10,4 +10,4 @@ interface GetTop3ListDto {
     likeCount : number;
 }
 
-export default GetTop3ListDto;
+export default GetTop3ListResponseDto;

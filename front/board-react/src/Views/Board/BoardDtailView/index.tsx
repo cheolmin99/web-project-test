@@ -59,6 +59,13 @@ export default function BoardDetailView() {
     setProductList(productList);
   }
 
+  const setLikeCommnedResponse = (data: GetBoardResponseDto) => {
+    const { board, commentList, likeList } = data;
+    setBoard(board);
+    setListItem(commentList);  
+    setLikyList(likeList);
+  }
+
   const getBoard = () => {
     axios.get(GET_BOARD_URL(boardNumber as string))
       .then((response) => getBoardResponseHandler(response))
@@ -139,7 +146,7 @@ export default function BoardDetailView() {
       return;
     }
 
-    setBoardResponse(data);
+    setLikeCommnedResponse(data);
   }
 
   const onPostCommentResponseHandler = (response: AxiosResponse<any, any>) => {
@@ -150,7 +157,7 @@ export default function BoardDetailView() {
       return;
     }
 
-    setBoardResponse(data);
+    setLikeCommnedResponse(data);
     setCommentContent('');
   }
 
@@ -188,6 +195,9 @@ export default function BoardDetailView() {
   //
   useEffect(() => {
     if (!boardNumber) return;
+    console.log(user?.email);
+    if (writeUser)
+    console.log(writeUser.email);
 
     getBoard();
   }, [])

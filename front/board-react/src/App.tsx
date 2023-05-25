@@ -15,6 +15,9 @@ import Main from './views/Main';
 import WriteView from './views/WriteView';
 import BoardDetailView from './views/Board/BoardDtailView';
 import UpdateView from './views/UpdateView';
+import MyPageView from './views/MyPageView';
+import SearchTagView from './components/SearchTagListItem';
+import SearchTagListView from './views/Board/SearchTagListView';
 
 function App() {
 
@@ -58,13 +61,14 @@ useEffect(() => {
           <Routes>
             <Route path='/' element={(<Main />)} />
             <Route path='/auth' element={(<AuthenticationView />)} />
-            {/* <Route path='/myPage' element={(<MyPageView />)} /> */}
+            <Route path='/myPage' element={(<MyPageView />)} />
             <Route path='/board'>
-            <Route path='post-board' element={(<WriteView />)} />
-            {/* <Route path='search/:content' element={(<SearchView />)} /> */}
-            <Route path='detail/:boardNumber' element={(<BoardDetailView />)} />
-            <Route path='update/:boardNumber' element={(<UpdateView />)} />
-          </Route>
+              <Route path='post-board' element={(<WriteView />)} />
+              <Route path='search-tag' element={(<SearchTagView />)} />
+              <Route path='search-tag/:tag' element={(<SearchTagListView />)} />
+              <Route path=':boardNumber' element={(<BoardDetailView />)} />
+              <Route path='update/:boardNumber' element={(<UpdateView />)} />
+            </Route>
           </Routes>
           {/* { path.pathname !== '/auth' && (<Footer />) } */}
           </Grid>

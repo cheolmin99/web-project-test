@@ -14,11 +14,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class PostMyListResponseDto {
     private int boardNumber;
-    private String boardImgUrl;
+    private String boardImgUrl1;
 
     public PostMyListResponseDto(BoardEntity boardEntity) {
         this.boardNumber = boardEntity.getBoardNumber();
-        this.boardImgUrl = boardEntity.getBoardImgUrl1();
+        this.boardImgUrl1 = boardEntity.getBoardImgUrl1();
     }
 
     public static List<PostMyListResponseDto> copyList(List<BoardEntity> boardEntityList) {

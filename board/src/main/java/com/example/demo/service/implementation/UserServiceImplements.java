@@ -130,7 +130,7 @@ public class UserServiceImplements implements UserService {
                 likyRepository.save(likyEntity);
             }
 
-            data = new PatchProfileResponseDto(true);
+            data = new PatchProfileResponseDto(userEntity);
 
         } catch (Exception exception) {
             exception.printStackTrace();

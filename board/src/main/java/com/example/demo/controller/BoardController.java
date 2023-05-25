@@ -54,7 +54,7 @@ public class BoardController {
     private final String GET_TOP15_SEARCH_WORD = "/top15-search-word";
     
     private final String PATCH_BOARD = "";
-    private final String POST_LIKE_LIST = "/like-list";
+    private final String GET_LIKE_LIST = "/like-list";
 
     private final String DELETE_BOARD = "/{boardNumber}";
     
@@ -102,7 +102,7 @@ public class BoardController {
         return response;
     }
     
-    @PostMapping(POST_LIKE_LIST)
+    @GetMapping(GET_LIKE_LIST)
     public ResponseDto<List<GetMyLikeListResponseDto>> myLikeList(@AuthenticationPrincipal String email) {
         ResponseDto<List<GetMyLikeListResponseDto>> response = boardService.myLikeList(email);
         return response;

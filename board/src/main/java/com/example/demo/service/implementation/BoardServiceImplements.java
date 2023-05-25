@@ -265,6 +265,7 @@ public class BoardServiceImplements implements BoardService {
 
             BoardEntity boardEntity = boardRepository.findByBoardNumber(boardNumber);
             if (boardEntity == null) return ResponseDto.setFailed(ResponseMessage.NOT_EXIST_BOARD);
+            UserEntity userEntity = userRepository.findByEmail(boardEntity.getWriterEmail());
             List<LikyEntity> likyList = likyRepository.findByBoardNumber(boardNumber);
             List<CommentEntity> commentList = commentRepository.findByBoardNumberOrderByWriterDateDesc(boardNumber);
             List<BoardHasProductEntity> boardHasProductList = boardHasProductRepository.findByBoardNumber(boardNumber);
@@ -279,7 +280,7 @@ public class BoardServiceImplements implements BoardService {
             boardEntity.getViewCount();
             boardRepository.save(boardEntity);
 
-            data = new GetBoardResponseDto(boardEntity, commentList, likyList, productList);
+            data = new GetBoardResponseDto(boardEntity, userEntity, commentList, likyList, productList);
 
         } catch (Exception exception) {
             exception.printStackTrace();
