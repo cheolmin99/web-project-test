@@ -89,6 +89,7 @@ export default function BoardWriteView() {
 
     const onBoardWriteHandler = () => {
         postBoard();
+        navigator('/');
     }
 
     const postBoard = async () => {
