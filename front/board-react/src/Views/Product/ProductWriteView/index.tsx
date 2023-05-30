@@ -478,13 +478,13 @@ export default function ProductWriteView() {
     }, [])
 
     return (
-        <>
-            <Box sx={{ display: 'flex', flexDirection: 'column', mt: '100px', pl: '450px', width: '1000px' }}>
+        
+            <Box sx={{ display: 'flex', flexDirection: 'column', mt: '100px', width: '100%', alignItems: 'center' }}>
                 {/* //? 상품 업로드 박스 */}
                 <Box >
                     <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
                         {/* //? 상품 등록박스1 */}
-                        <Box sx={{ p: '15PX 15px', width: '235px', height: '285px', border: 0.3, borderRadius: 1 }}>
+                        <Box sx={{ m: '15px 15px', p: '15PX 15px', width: '235px', height: '285px', border: 0.3, borderRadius: 1 }}>
                             <Box sx={{ display: 'flex' }}>
                                 <Box sx={{ p: '15px 0' }}>
                                     <Box sx={{ width: '100%' }} >
@@ -509,7 +509,7 @@ export default function ProductWriteView() {
                             </Box>
                         </Box >
                         {/* //? 상품 등록박스2 */}
-                        <Box sx={{ p: '15PX 15px', width: '235px', height: '285px', border: 0.3, borderRadius: 1 }}>
+                        <Box sx={{ m: '15px 15px', p: '15PX 15px', width: '235px', height: '285px', border: 0.3, borderRadius: 1 }}>
                             <Box sx={{ display: 'flex' }}>
                                 <Box sx={{ p: '15px 0' }}>
                                     <Box sx={{ width: '100%' }} >
@@ -533,7 +533,7 @@ export default function ProductWriteView() {
                             </Box>
                         </Box>
                         {/* //? 상품 등록박스3 */}
-                        <Box sx={{ p: '15PX 15px', width: '235px', height: '285px', border: 0.3, borderRadius: 1 }}>
+                        <Box sx={{ m: '15px 15px', p: '15PX 15px', width: '235px', height: '285px', border: 0.3, borderRadius: 1 }}>
                             <Box sx={{ display: 'flex' }}>
                                 <Box sx={{ p: '15px 0' }}>
                                     <Box sx={{ width: '100%' }} >
@@ -560,7 +560,7 @@ export default function ProductWriteView() {
 
                     <Box sx={{ mt: '20px', mb: '100px', display: 'flex', justifyContent: 'space-between' }}>
                         {/* //? 상품 등록박스4 */}
-                        <Box sx={{ p: '15PX 15px', width: '235px', height: '285px', border: 0.3, borderRadius: 1 }}>
+                        <Box sx={{ m: '15px 15px', p: '15PX 15px', width: '235px', height: '285px', border: 0.3, borderRadius: 1 }}>
                             <Box sx={{ display: 'flex' }}>
                                 <Box sx={{ p: '15px 0' }}>
                                     <Box sx={{ width: '100%' }} >
@@ -584,7 +584,7 @@ export default function ProductWriteView() {
                             </Box>
                         </Box>
                         {/* //? 상품 등록박스5 */}
-                        <Box sx={{ p: '15PX 15px', width: '235px', height: '285px', border: 0.3, borderRadius: 1 }}>
+                        <Box sx={{ m: '15px 15px', p: '15PX 15px', width: '235px', height: '285px', border: 0.3, borderRadius: 1 }}>
                             <Box sx={{ display: 'flex' }}>
                                 <Box sx={{ p: '15px 0' }}>
                                     <Box sx={{ width: '100%' }} >
@@ -608,7 +608,7 @@ export default function ProductWriteView() {
                             </Box>
                         </Box>
                         {/* //? 상품 등록박스6 */}
-                        <Box sx={{ p: '15PX 15px', width: '235px', height: '285px', border: 0.3, borderRadius: 1 }}>
+                        <Box sx={{ m: '15px 15px', p: '15PX 15px', width: '235px', height: '285px', border: 0.3, borderRadius: 1 }}>
                             <Box sx={{ display: 'flex' }}>
                                 <Box sx={{ p: '15px 0' }}>
                                     <Box sx={{ width: '100%' }} >
@@ -633,12 +633,13 @@ export default function ProductWriteView() {
                         </Box>
                     </Box>
                 </Box>
-            </Box>
-
-            {/* <Fab sx={{ position: 'fixed', bottom: '50px', right: '100px' }} onClick={() => onProductWriteHandler()}>
+                {/* <Fab sx={{ position: 'fixed', bottom: '50px', right: '100px' }} onClick={() => onProductWriteHandler()}>
                 <CreateIcon />
             </Fab> */}
-        </>
+            </Box>
+
+            
+        
     )
 
 }

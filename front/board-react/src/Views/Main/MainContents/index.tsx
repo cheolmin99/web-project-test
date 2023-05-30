@@ -74,7 +74,7 @@ export default function MainContent() {
 
     return(
         <Box sx={{display: 'flex', justifyContent: 'center'}}>
-            <Box width='500px' sx={{display: 'flex', flexDirection: 'column', mt:'50px'}}>
+            <Box width='500px' height={'100%'} sx={{display: 'flex', flexDirection: 'column', mt:'50px'}}>
 
                 <Typography sx={{fontSize:'20px', fontWeight:'700'}}>How do I look?</Typography>
             

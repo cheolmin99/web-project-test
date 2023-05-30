@@ -229,7 +229,7 @@ export default function BoardDetailView() {
                 (<IconButton onClick={(event) => onMenuHandler(event)}><MoreVertIcon /></IconButton>) : (<></>)
             }
             <Menu anchorEl={anchorElement} open={menuOpen} onClose={onMenuCloseHandler}>
-              <MenuItem sx={{ p: '10px 59px', opacity: 0.5 }} onClick={() => navigator('/')}>수정</MenuItem>
+              <MenuItem sx={{ p: '10px 59px', opacity: 0.5 }} onClick={() => navigator(`/board/update/${board?.boardNumber}`)}>수정</MenuItem>
               <Divider />
               <MenuItem sx={{ p: '10px 59px', color: '#ff0000', opacity: 0.5 }} onClick={() => onDeleteHandler()}>삭제</MenuItem>
             </Menu>

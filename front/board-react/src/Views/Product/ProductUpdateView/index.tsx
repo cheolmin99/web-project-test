@@ -427,7 +427,7 @@ export default function ProductUpdateView() {
 
     return (
         <>
-            <Box sx={{ display: 'flex', flexDirection: 'column', mt: '100px', pl: '450px', width: '1000px' }}>
+            <Box sx={{ display: 'flex', flexDirection: 'column', mt: '100px', pl: '450px', width: '100%' }}>
                 {/* //? 상품 업로드 박스 */}
                 <Box >
                     <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -436,7 +436,7 @@ export default function ProductUpdateView() {
                             <Box sx={{ display: 'flex' }}>
                                 <Box sx={{ p: '15px 0' }}>
                                     <Box sx={{ width: '100%' }} >
-                                        <Box sx={{ width: '100%' }} component='img' src={product1?.productImgUrl ? product1.productImgUrl : ''} />
+                                        <Box sx={{ width: '100%', height: '100%' }} component='img' src={product1?.productImgUrl ? product1.productImgUrl : ''} />
                                     </Box>
                                 </Box>
                                 <Box sx={{}}>
